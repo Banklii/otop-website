@@ -1,0 +1,28 @@
+.container {
+    /* border: black 1px solid; */
+    margin-top: 5rem;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.container .row {
+    /* border: red 1px solid; */
+}
+
+.container .row .col-md-5,
+.container .row .col-md-6,
+.container .row .col-md-7,
+.container .row .col-md-8 {
+    /* border: yellow 1px solid; */
+}
+
+.container .navbar .collapse ul {
+    margin: 0 auto;
+}
+
+.container .navbar .collapse .nav-item {
+    margin-left: 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,94 @@
+/* body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+}
+
+img {
+    width: auto;
+    height: 55px;
+}
+
+.navbar {
+    font-family: 'Kanit', sans-serif;
+    background-color: green;
+    border-radius: 0;
+}
+
+a {
+    color: red;
+    font-size: 16px;
+}
+
+a:hover {
+    background-color: yellowgreen;
+    color: black;
+}
+
+.input-group {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search {
+    border-radius: 20px;
+}
+
+.btn {
+    border-radius: 20px;
+}
+
+i {
+    letter-spacing: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#preview {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+
+/***************************************** Start-Navbar ****************************************/
+
+.navbar .container-fluid .logo-banner img {
+    width: auto;
+    height: 40px;
+}
+
+.navbar .container-fluid .form-login-regis {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#btn-login {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 25px;
+}
+
+#btn-regis {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 25px;
+}
+
+.navbar .container-fluid .collapse ul {
+    margin: 0 auto;
+}
+
+.navbar .modal-body .form-floating input {
+    padding-left: 30px;
+}
+
+.navbar .modal-body .form-floating label {
+    padding-left: 30px;
+}
+
+
+/***************************************** End-Navbar ****************************************/

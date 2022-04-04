@@ -1,0 +1,29 @@
+.card {
+    border: #CED4DA 1px solid;
+}
+
+.card-body a {
+    text-decoration: none;
+    /* color: #343A40; */
+}
+
+.card-body .btn {
+    border-radius: 25px;
+}
+
+.card-body .btn a:hover {
+    color: #fff;
+}
+
+.card-body .btn a {
+    /* color: primary; */
+}
+
+.card-body #cart i {
+    color: #ffc107;
+    padding: 5px;
+}
+
+.card-body #cart i:hover {
+    color: #fff;
+}
