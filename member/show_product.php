@@ -29,7 +29,7 @@ while ($row_prd = mysqli_fetch_array($result)) {
                     ?>">รายละเอียด</a>
                 </button> -->
                 <button id="cart" type="button" class="btn btn-outline-warning"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></button>
-                <button type="button" class="btn btn-outline-primary"><a href="../prd.php?id=<?php echo $row_prd[0]; ?>"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;รายละเอียด</a></button>
+                <button type="button" class="btn btn-outline-primary"><a href="prd.php?id=<?php echo $row_prd[0]; ?>"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;รายละเอียด</a></button>
             </div>
             <br>
         </div>
