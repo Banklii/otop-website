@@ -72,7 +72,7 @@ session_start();
                                 <!-- <div class="addthis_inline_share_toolbox_sf2w"></div> -->
                             </p>
                             <br>
-                            <button id="cart" type="button" class="btn btn-outline-warning"><a href="#"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;เพิ่มลงตะกร้า</a></button>
+                            <button id="cart" type="button" class="btn btn-outline-warning"><a href="cart.php?p_id=<?php echo $row["p_id"]; ?>&act=add"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;เพิ่มลงตะกร้า</a></button>
                             <button id="buy" type="button" class="btn btn-outline-success"><a href="#"><i class="fa-solid fa-check-double"></i>&nbsp;&nbsp;ซื้อสินค้า</a></button>
                         </div>
                     </div>
@@ -83,7 +83,7 @@ session_start();
     <br>
     <br>
 
-    
+
 
     <?php
     include("Back_to_top.php");
