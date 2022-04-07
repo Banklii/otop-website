@@ -52,11 +52,11 @@ include("search.php");
             $act = (isset($_GET['act']) ? $_GET['act'] : '');
             $q = $_GET['q'];
             if($act=='showbytype'){
-            // include('list_prd_by_type.php');
+            include('list_prd_by_type.php');
             }else if($q!=''){
-            // include("show_product_q.php");
+            include("show_product_q.php");
             }else if($act=='add'){
-            // include("member_form_add.php");
+            include("member_form_add.php");
             }else{
             include('show_product.php');
             }
