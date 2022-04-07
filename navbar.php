@@ -22,7 +22,7 @@ include('h.php');
         <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home"></i>&nbsp;&nbsp;หน้าหลัก</a>
+                    <a class="nav-link active" aria-current="page" href="index.php"><i class="fas fa-home"></i>&nbsp;&nbsp;หน้าหลัก</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bars-staggered"></i>&nbsp;&nbsp;ประเภทสินค้า</a>
@@ -44,7 +44,7 @@ include('h.php');
                     <a class="nav-link"><i class="fa-solid fa-percent"></i>&nbsp;&nbsp;โปรโมชัน</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"><i class="fas fa-rss"></i>&nbsp;&nbsp;ข่าวสาร/กิจกรรม</a>
+                    <a href="news.php" class="nav-link"><i class="fas fa-rss"></i>&nbsp;&nbsp;ข่าวสาร/กิจกรรม</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;ติดต่อ</a>

@@ -15,13 +15,13 @@
     </div>
     <ul class="sidebar-menu" data-widget="tree">
         <li>
-        <a href="index.php"><i class="fa fa-home"></i>
+        <a href="index.php"><i class="fa fa-home"></i>&nbsp;&nbsp;
           <span> หน้าหลัก</span>
         </a>
       </li>
       
            <li class="active">
-        <a href=""><i class="fa fa-cogs"></i> <span>จัดการข้อมูลระบบ</span>
+        <a href=""><i class="fa fa-cogs"></i> &nbsp;&nbsp;<span>จัดการข้อมูลระบบ</span>
         <span class="pull-right-container">
           <i class="fa fa-angle-down pull-right"></i>
         </span>
@@ -34,7 +34,7 @@
         </a>
       </li>
       <li>
-        <a href="news.php"><i class="fas fa-rss-square"></i>
+        <a href="news.php"><i class="fas fa-rss-square"></i>&nbsp;&nbsp;
           <span> ข่าวสาร/กิจกรรม</span>
         </a>
       </li>
@@ -49,7 +49,7 @@
         </a>
       </li>
       <li>
-        <a href="contact.php"><i class="fas fa-address-book"></i>
+        <a href="contact.php"><i class="fas fa-address-book"></i>&nbsp;&nbsp;
           <span> ข้อมูลติดต่อ </span>
         </a>
       </li>
@@ -59,7 +59,7 @@
         </a>
       </li>
       <li>
-        <a href="re_product.php"><i class="fas fa-bolt"></i>
+        <a href="re_product.php"><i class="fas fa-bolt"></i>&nbsp;&nbsp;
           <span> สินค้าแนะนำ </span>
         </a>
       </li>
@@ -69,7 +69,7 @@
         </a>
       </li>
            <li class="active">
-        <a href=""><i class="fa fa-cogs"></i> <span>จัดการข้อมูลรายงาน</span>
+        <a href=""><i class="fa fa-cogs"></i>&nbsp;&nbsp; <span>จัดการข้อมูลรายงาน</span>
         <span class="pull-right-container">
           <i class="fa fa-angle-down pull-right"></i>
         </span>

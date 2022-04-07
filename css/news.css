@@ -1,0 +1,19 @@
+.container .row {
+    border: 1px solid gainsboro;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.container .row .col-md-4 {
+    /* border: 1px solid blue; */
+    padding: 15px;
+}
+
+.container .row .col-md-8 {
+    /* border: 1px solid red; */
+    padding: 15px;
+}
+
+.container .row .col-md-8 .btn {
+    border-radius: 25px;
+}
