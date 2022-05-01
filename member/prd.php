@@ -72,8 +72,15 @@ session_start();
                                 <!-- <div class="addthis_inline_share_toolbox_sf2w"></div> -->
                             </p>
                             <br>
-                            <button id="cart" type="button" class="btn btn-outline-warning"><a href="cart.php?p_id=<?php echo $row["p_id"]; ?>&act=add"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;เพิ่มลงตะกร้า</a></button>
+                            <?php
+	                            $sql = "SELECT * FROM tbl_product as p INNER JOIN tbl_type  as t ON p.type_id=t.type_id AND p_id = $p_id";
+                                $result = mysqli_query($con, $sql) or die("Error in query: $sql " . mysqli_error());
+                                $row = mysqli_fetch_array($result);
+	                        ?>
+                            <!-- <button id="cart" type="button" class="btn btn-outline-warning"><a href="cart.php?p_id=<?php echo $row["p_id"]; ?>&act=add"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;เพิ่มลงตะกร้า</a></button> -->
+                            <input type="text" class="product-quantity" name="quantity" value="1" size="2" /><button  type="submit"  value="Add to Cart" class="btnAddAction"><a href="cart.php">5555555555</button>
                             <button id="buy" type="button" class="btn btn-outline-success"><a href="#"><i class="fa-solid fa-check-double"></i>&nbsp;&nbsp;ซื้อสินค้า</a></button>
+                            
                         </div>
                     </div>
                 </div>

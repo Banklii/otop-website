@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/news.css">
 
 <?php
-include("h.php");
+// include("h.php");
 ?>
 
 <?php
