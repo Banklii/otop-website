@@ -12,18 +12,18 @@
   
 <?php
 //connect db
-    include("connect.php");
+    include("../condb.php");
 	$p_id = $_GET['p_id']; //สร้างตัวแปร p_id เพื่อรับค่า
 	
 	$sql = "SELECT * FROM tbl_product where p_id=$p_id";  //รับค่าตัวแปร p_id ที่ส่งมา
-	$result = mysqli_query($conn, $sql);
+	$result = mysqli_query($con, $sql);
 	// $row = mysqli_fetch_array($result);
 	$row_prd = mysqli_fetch_array($result) ;
 	//แสดงรายละเอียด
 	echo "<tr>";
   	echo "<td width='85' valign='top'><b>Title</b></td>";
     echo "<td width='279'>" . $row_prd["p_name"] . "</td>";
-    echo "<td width='70' rowspan='4'><img src='img/" . $row_prd["p_img"] . " ' width='100'></td>";
+    echo "<td width='70' rowspan='4'><img src='../p_img/" . $row_prd["p_img"] . " ' width='100'></td>";
   	echo "</tr>";
   	echo "<tr>";
     echo "<td valign='top'><b>Detail</b></td>";
@@ -41,6 +41,6 @@
 ?>
 </table>
 
-<p><center><a href="product.php">กลับไปหน้ารายการสินค้า</a></center>
+<p><center><a href="index.php">กลับไปหน้ารายการสินค้า</a></center>
 </body>
 </html>

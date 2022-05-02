@@ -1,6 +1,6 @@
 <?php
 	session_start();
-    include("connect.php");  
+    include("../condb.php");  
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,6 +8,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Checkout</title>
 </head>
+<?php
+include("h.php");
+?>
 <body>
 <form id="frmcart" name="frmcart" method="post" action="saveorder.php">
   <table width="600" border="0" align="center" class="square">
@@ -26,7 +29,7 @@
 	foreach($_SESSION['cart'] as $p_id=>$qty)
 	{
 		$sql = "SELECT * FROM tbl_product where p_id=$p_id";
-		$query	= mysqli_query($conn, $sql);
+		$query	= mysqli_query($con, $sql);
 		$row	= mysqli_fetch_array($query);
 		$sum	= $row['p_price']*$qty;
 		$total	+= $sum;
@@ -73,5 +76,6 @@
 </tr>
 </table>
 </form>
+<button id="buy" type="button" class="btn btn-outline-success"><a href="index.php"><i class="fa-solid fa-check-double"></i>&nbsp;&nbsp;กลับ</a></button>
 </body>
 </html>

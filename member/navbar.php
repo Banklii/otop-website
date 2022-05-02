@@ -70,7 +70,9 @@ $totalRows_typeprd = mysqli_num_rows($typeprd);
                     <a class="nav-link"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;ติดต่อ</a>
                 </li>
             </ul>
-            <button type="button" class="btn btn-outline-danger"><a href="../logout.php" onclick="return confirm('คุณต้องการออกจากระบบหรือไม่ ?');"><i class="fa-solid fa-power-off"></i>&nbsp;&nbsp;ออกจากระบบ</a></button>
+            <!-- <a><i class="fa-solid fa-cart-arrow-down"></i></a> -->
+            <a href="cart.php" id="cart"><i class="fa-solid fa-cart-arrow-down"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" id="logout" class="btn btn-outline-danger"><a href="../logout.php" onclick="return confirm('คุณต้องการออกจากระบบหรือไม่ ?');"><i class="fa-solid fa-power-off"></i>&nbsp;&nbsp;ออกจากระบบ</a></button>
         </div>
 
 </nav>

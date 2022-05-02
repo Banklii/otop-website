@@ -24,9 +24,16 @@ session_start();
     <div class="container">
         <div class="row">
             <?php
+
+            $act = (isset($_GET['act']) ? $_GET['act'] : '');
+            $p_id = $_GET['p_id'];
+
             $sql = "SELECT * FROM tbl_product as p INNER JOIN tbl_type  as t ON p.type_id=t.type_id AND p_id = $p_id";
             $result = mysqli_query($con, $sql) or die("Error in query: $sql " . mysqli_error());
             $row = mysqli_fetch_array($result);
+
+
+
 
             $sql_last_view = "SELECT p_view FROM tbl_product Where p_id = '" . $p_id . "'";
             $resalt_last_view = mysqli_query($con, $sql_last_view) or die("Error in query: $sql_last_view " . mysqli_error());
@@ -73,14 +80,28 @@ session_start();
                             </p>
                             <br>
                             <?php
-	                            $sql = "SELECT * FROM tbl_product as p INNER JOIN tbl_type  as t ON p.type_id=t.type_id AND p_id = $p_id";
-                                $result = mysqli_query($con, $sql) or die("Error in query: $sql " . mysqli_error());
-                                $row = mysqli_fetch_array($result);
-	                        ?>
+
+                            // $sql = "SELECT * FROM tbl_product as p INNER JOIN tbl_type  as t ON p.type_id=t.type_id AND p_id = $p_id";
+                            // $result = mysqli_query($con, $sql) or die("Error in query: $sql " . mysqli_error());
+                            // $row = mysqli_fetch_array($result);
+
+                            $p_id = $_GET['p_id']; //สร้างตัวแปร p_id เพื่อรับค่า
+
+                            $sql = "SELECT * FROM tbl_product where p_id=$p_id";  //รับค่าตัวแปร p_id ที่ส่งมา
+                            $result = mysqli_query($con, $sql);
+                            // $row = mysqli_fetch_array($result);
+                            $row_prd = mysqli_fetch_array($result);
+
+                            ?>
                             <!-- <button id="cart" type="button" class="btn btn-outline-warning"><a href="cart.php?p_id=<?php echo $row["p_id"]; ?>&act=add"><i class="fa-solid fa-cart-plus"></i>&nbsp;&nbsp;เพิ่มลงตะกร้า</a></button> -->
-                            <input type="text" class="product-quantity" name="quantity" value="1" size="2" /><button  type="submit"  value="Add to Cart" class="btnAddAction"><a href="cart.php">5555555555</button>
-                            <button id="buy" type="button" class="btn btn-outline-success"><a href="#"><i class="fa-solid fa-check-double"></i>&nbsp;&nbsp;ซื้อสินค้า</a></button>
+                            <!-- <input type="text" class="product-quantity" name="quantity" value="1" size="2" /><button  type="submit"  value="Add to Cart" class="btnAddAction"><a href="cart.php">5555555555</button> -->
+                            <?php
+                            echo "<button id='cart' class='btn btn-outline-warning'><a href='cart.php?p_id=$row_prd[p_id]&act=add'> เพิ่มลงตะกร้า </a></button>";
                             
+                            ?>
+                            <!-- <button id="buy" type="button" class="btn btn-outline-success"><a href="#"><i class="fa-solid fa-check-double"></i>&nbsp;&nbsp;ซื้อสินค้า</a></button> -->
+                            <button id="buy" type="button" class="btn btn-outline-success"><a href="index.php"><i class="fa-solid fa-check-double"></i>&nbsp;&nbsp;กลับหน้าหลัก</a></button>
+
                         </div>
                     </div>
                 </div>

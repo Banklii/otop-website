@@ -38,6 +38,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Shopping Cart</title>
 </head>
+<?php
+include("h.php");
+?>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- <p> ยินดีต้อนรับคุณ : <?php echo $_SESSION["m_name"]; ?> </p> -->
+<?php
+include("navbar.php");
+?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 <body>
 <form id="frmcart" name="frmcart" method="post" action="?act=update">
@@ -57,11 +75,11 @@
 $total=0;
 if(!empty($_SESSION['cart']))
 {
-	include("connect.php");
+	include("../condb.php");
 	foreach($_SESSION['cart'] as $p_id=>$qty)
 	{
 		$sql = "SELECT * FROM tbl_product where p_id=$p_id";
-		$query = mysqli_query($conn, $sql);
+		$query = mysqli_query($con, $sql);
 		$row = mysqli_fetch_array($query);
 		$sum = $row['p_price'] * $qty;
 		$total += $sum;
@@ -83,7 +101,7 @@ if(!empty($_SESSION['cart']))
 }
 ?>
 <tr>
-<td><a href="product.php">กลับหน้ารายการสินค้า</a></td>
+<td><a href="index.php">กลับหน้ารายการสินค้า</a></td>
 <td colspan="4" align="right">
     <input type="submit" name="button" id="button" value="ปรับปรุง" />
     <input type="button" name="Submit2" value="สั่งซื้อ" onclick="window.location='confirm.php';" />
@@ -92,4 +110,24 @@ if(!empty($_SESSION['cart']))
 </table>
 </form>
 </body>
+<?php
+// include("show_product.php");
+?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<?php
+include("Back_to_top.php");
+?>
+<br>
+<br>
+<?php
+include("footer.php");
+?>
+
 </html>

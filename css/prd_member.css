@@ -141,3 +141,7 @@
 #buy a:hover {
     color: #fff;
 }
+
+#cart :hover{
+    color: #fff;
+}
