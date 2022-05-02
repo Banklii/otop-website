@@ -10,7 +10,7 @@
       <div class="pull-left info">
         <p>คุณ <?php echo $m_name; ?></p>
         <!-- Status -->
-        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        <a href="#"><i class="fa fa-circle text-success"></i> ออนไลน์</a>
       </div>
     </div>
     <ul class="sidebar-menu" data-widget="tree">

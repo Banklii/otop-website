@@ -1,5 +1,5 @@
 
-<!-- jQuery 3  devbanban.com -->
+<!-- jQuery 3  -->
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -22,7 +22,39 @@ $('#example1').DataTable( {
 } );
 
 </script>
-<script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#myTable').DataTable({
+            language: {
+                "decimal": "",
+                "emptyTable": "ไม่มีข้อมูลในตาราง",
+                "info": "แสดง _START_ - _END_ จาก _TOTAL_ รายการ",
+                "infoEmpty": "แสดง 0 - 0 จาก 0 รายการ",
+                "infoFiltered": "(filtered from _MAX_ total entries)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "แสดง _MENU_ รายการ",
+                "loadingRecords": "Loading...",
+                "processing": "Processing...",
+                "search": "ค้นหา:",
+                "zeroRecords": "No matching records found",
+                "paginate": {
+                    "first": "หน้าแรก",
+                    "last": "หน้าสุดท้าย",
+                    "next": "หน้าถัดไป",
+                    "previous": "ก่อนหน้า"
+                },
+                "aria": {
+                    "sortAscending": ": activate to sort column ascending",
+                    "sortDescending": ": activate to sort column descending"
+                }
+            }
+        });
+    });
+</script>
+
+<!-- <script>
   $(function () {
     $('#example1').DataTable()
     $('#example2').DataTable({
@@ -34,4 +66,4 @@ $('#example1').DataTable( {
       'autoWidth'   : false
     })
   })
-</script>
+</script> -->

@@ -16,7 +16,7 @@ $query = "SELECT * FROM tbl_re_product as p
 INNER JOIN tbl_type as t ON p.type_id = t.type_id
 ORDER BY p.p_id DESC" or die("Error:" . mysqli_error());
 $result = mysqli_query($con, $query);
-echo ' <table id="example1" class="table table-bordered table-striped">';
+echo ' <table id="myTable" class="table table-bordered table-striped">';
   echo "<thead>";
     echo "<tr class=''>
       <th width='3%'  class='hidden-xs'>ID</th>

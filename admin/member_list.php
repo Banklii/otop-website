@@ -28,7 +28,7 @@ $query = "
 SELECT * FROM tbl_member 
 ORDER BY member_id DESC" or die("Error:" . mysqli_error());
 $result = mysqli_query($con, $query);
-echo '<table id="example1" class="table table-bordered table-striped">';
+echo '<table id="myTable" class="table table-bordered table-striped">';
   echo "<thead>";
     echo "<tr class=''>
       <th width='5%'>ID</th>

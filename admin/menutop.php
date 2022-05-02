@@ -21,7 +21,7 @@
          <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="../m_img/<?php echo $row['m_img'];?>" width="25" height="25" class="img-circle user-image" alt="User Image">
-                <span class="hidden-xs">Welcome Admin</span>
+                <span class="hidden-xs">สวัสดี Admin</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
@@ -31,7 +31,7 @@
                   <p>
                     Admin<br>
                     
-                    <small>Name : <?php echo $m_name;?>
+                    <small>ชื่อ : <?php echo $m_name;?>
                     </small>
                   </p>
                 </li>
@@ -40,10 +40,10 @@
                 <!-- Menu Footer-->
                 <li class="user-footer">
                   <div class="pull-left">
-                    <a href="#" class="btn btn-default btn-flat" disabled>Profile</a>
+                    <a href="#" class="btn btn-default btn-flat" disabled>โปรไฟล์</a>
                   </div>
                   <div class="pull-right">
-                    <a href="../logout.php" class="btn btn-default btn-flat" onclick="return confirm('คุณต้องการออกจากระบบหรือไม่ ?');">Sign out</a>
+                    <a href="../logout.php" class="btn btn-default btn-flat" onclick="return confirm('คุณต้องการออกจากระบบหรือไม่ ?');">ออกจากระบบ</a>
                   </div>
                 </li>
               </ul>
