@@ -16,6 +16,9 @@ include("search.php");
 <?php
 // include("banner.php");
 ?>
+<?php
+// include("banner.php");
+?>
 <div class="container">
     <div class="row">
       <div class="col-md-12" style="margin-top: 10px">
