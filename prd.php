@@ -120,6 +120,13 @@ $p_id = $_GET["id"];
           INNER JOIN tbl_type  as t ON p.type_id=t.type_id      
       AND p_id = $p_id
       ";
+
+            // $sql = "SELECT * FROM tbl_product WHERE p_name LIKE '%$name%' ORDER BY p_name ASC";
+            // $result1 = mysqli_query($con, $sql);
+            // $row = mysqli_num_rows($result1);
+            // $order = 1;
+
+
             $result = mysqli_query($con, $sql) or die("Error in query: $sql " . mysqli_error());
             $row = mysqli_fetch_array($result);
 
@@ -163,7 +170,7 @@ $p_id = $_GET["id"];
                             <p>
                                 <!-- Go to www.addthis.com/dashboard to customize your tools -->
                                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5500ee80057fdb99"></script>
-                            <!-- <div class="addthis_inline_share_toolbox_sf2w"></div> -->
+                                <!-- <div class="addthis_inline_share_toolbox_sf2w"></div> -->
                             </p>
                         </div>
                     </div>
@@ -172,30 +179,30 @@ $p_id = $_GET["id"];
         </div>
     </div>
     <script>
-            // Get the modal
-            var modal = document.getElementById('myModal');
+        // Get the modal
+        var modal = document.getElementById('myModal');
 
-            // Get the image and insert it inside the modal - use its "alt" text as a caption
-            var img = document.getElementById('myImg');
-            var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
-            img.onclick = function() {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            }
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
 
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-        </script>
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
 <?php
-include('script4.php');
+// include('script4.php');
 ?>

@@ -1,0 +1,38 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    float: left;
+}
+
+.flex-container>div {
+    color: black;
+    width: auto;
+    margin: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+
+}
+
+.flex-container .card {
+    border: #CED4DA 1px solid;
+    display: flex;
+
+}
+
+.card-body a {
+    text-decoration: none;
+}
+
+.card-body .btn {
+    border-radius: 25px;
+}
+
+.card-body .btn a:hover {
+    color: #fff;
+}
+
+.card-img-top {
+    padding: 10px ;
+}
