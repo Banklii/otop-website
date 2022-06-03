@@ -52,14 +52,16 @@ include("search.php");
             <?php
             $act = (isset($_GET['act']) ? $_GET['act'] : '');
             $q = $_GET['q'];
-            if($act=='showbytype'){
-            include('list_prd_by_type.php');
-            }else if($q!=''){
-            include("show_product_q.php");
-            }else if($act=='add'){
-            include("member_form_add.php");
-            }else{
-            include('show_product.php');
+            if ($act == 'showbytype') {
+              include('list_prd_by_type.php');
+            } else if ($q != '') {
+              include("show_product_q.php");
+            } else if ($act == 'add') {
+              include("member_form_add.php");
+            } else if ($act == 'q') {
+              include("list_prd_by_search.php");
+            } else {
+              include('show_product.php');
             }
             ?>
           </div>

@@ -1,8 +1,10 @@
 <?php
 include('h.php');
-include("condb.php");
+require_once('condb.php');
+// include("condb.php");
 $p_id = $_GET["id"];
 ?>
+
 <!DOCTYPE html>
 
 <head>
@@ -113,20 +115,14 @@ $p_id = $_GET["id"];
     //   include('banner.php');
     include('navbar.php');
     ?>
+
+
+
     <div class="container">
         <div class="row">
             <?php
             $sql = "SELECT * FROM tbl_product as p 
-          INNER JOIN tbl_type  as t ON p.type_id=t.type_id      
-      AND p_id = $p_id
-      ";
-
-            // $sql = "SELECT * FROM tbl_product WHERE p_name LIKE '%$name%' ORDER BY p_name ASC";
-            // $result1 = mysqli_query($con, $sql);
-            // $row = mysqli_num_rows($result1);
-            // $order = 1;
-
-
+            INNER JOIN tbl_type  as t ON p.type_id=t.type_id AND p_id = $p_id";
             $result = mysqli_query($con, $sql) or die("Error in query: $sql " . mysqli_error());
             $row = mysqli_fetch_array($result);
 
@@ -141,6 +137,7 @@ $p_id = $_GET["id"];
             $resalt_updateview = $con->query($update_view);
             //อัพเดทวิวสินค้าใหม่
             ?>
+
             <div class="col-md-12">
                 <div class="container" style="margin-top: 50px">
                     <div class="row">
