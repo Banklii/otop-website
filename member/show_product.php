@@ -20,7 +20,7 @@ while ($row_prd = mysqli_fetch_array($result)) {
             <img class="card-img-top">
             <a href=""> <?php echo "<img src='../p_img/" . $row_prd['p_img'] . "'width='200' height='200'>"; ?></a>
             <div class="card-body">
-                <a href="../prd.php?id=<?php echo $row_prd[0]; ?>"><b> <?php echo $row_prd["p_name"]; ?></b> </a>
+                <a href="prd.php?id=<?php echo $row_prd[0]; ?>"><b> <?php echo $row_prd["p_name"]; ?></b> </a>
                 <br>
                 <br>
                 ราคา <font color=""> <?php echo $row_prd["p_price"]; ?></font> บาท
@@ -34,7 +34,7 @@ while ($row_prd = mysqli_fetch_array($result)) {
                     ?>">รายละเอียด</a>
                 </button> -->
                 <!-- <button id="cart" type="button" class="btn btn-outline-warning"><a href="cart.php?p_id=<?php echo $row["p_id"]; ?>&act=add"><i class="fa-solid fa-cart-plus"></i></a></button> -->
-                <button type="button" class="btn btn-outline-primary"><a href="prd.php?p_id=<?php echo $row_prd[0]; ?>"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;รายละเอียด</a></button>
+                <button type="button" class="btn btn-outline-primary"><a href="prd.php?id=<?php echo $row_prd[0]; ?>"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;รายละเอียด</a></button>
             </div>
             <br>
         </div>

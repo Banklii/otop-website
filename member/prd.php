@@ -16,20 +16,20 @@ session_start();
 
 
 </head>
-
-<body>
-    <?php
+<?php
     include('navbar.php');
     ?>
+<body>
+    
     <div class="container">
         <div class="row">
             <?php
 
 
-            $sql = "SELECT * FROM tbl_product as p INNER JOIN tbl_type  as t ON p.type_id=t.type_id AND p_id = $p_id";
+            $sql = "SELECT * FROM tbl_product as p 
+INNER JOIN tbl_type  as t ON p.type_id=t.type_id AND p_id = $p_id";
             $result = mysqli_query($con, $sql) or die("Error in query: $sql " . mysqli_error());
             $row = mysqli_fetch_array($result);
-
 
 
 
@@ -87,7 +87,7 @@ session_start();
                             $sql = "SELECT * FROM tbl_product where p_id=$p_id";  //รับค่าตัวแปร p_id ที่ส่งมา
                             $result = mysqli_query($con, $sql) or die("Error in query: $sql " . mysqli_error());
                             $row_prd = mysqli_fetch_array($result);
-                            ?>          
+                            ?>
                             <?php
                             echo "<button id='cart' class='btn btn-outline-warning'><a href='cart.php?p_id=$row_prd[p_id]&act=add'> เพิ่มลงตะกร้า </a></button>";
                             ?>

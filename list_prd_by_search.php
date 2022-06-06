@@ -25,7 +25,8 @@ while ($row_prd = mysqli_fetch_array($result)) {
                 <img class="card-img-top">
                 <a href=""> <?php echo "<img src='p_img/" . $row_prd['p_img'] . "'width='200' height='200'>"; ?></a>
                 <div class="card-body">
-                    <a href="prd.php"><b> <?php echo $row_prd["p_name"]; ?></b> </a>
+                    <!-- <a href="#"><b> <?php echo $row_prd["p_name"]; ?></b> </a> -->
+                    <a href="prd.php?id=<?php echo $row_prd[0]; ?>"><b> <?php echo $row_prd["p_name"]; ?></b> </a>
                     <br>
                     <br>
                     ราคา <font color=""> <?php echo $row_prd["p_price"]; ?></font> บาท
