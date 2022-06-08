@@ -77,11 +77,11 @@ while ($row = mysqli_fetch_array($result)) {
     "<br>ประเภท: <font color='blue'>" . $row["type_name"] . "</font>" .
     "</td class='hidden-xs'> ";
   echo "<td class='hidden-xs'>" . $row["n_detail"] . "</td> ";
-  echo "<td>การเข้าชม " . $row["p_view"] . " ครั้ง </td> ";
+  echo "<td>การเข้าชม " . $row["n_view"] . " ครั้ง </td> ";
   "</td> ";
   echo "<td> วันที่  " . date('d/m/Y', strtotime($row["datesave"])) . "</td> ";
-  echo "<td><a href='product.php?act=edit&ID=$row[p_id]' class='btn btn-warning btn-xs'><span class='glyphicon glyphicon-edit'></span></a> 
-        <a href='product_del_db.php?ID=$row[p_id]' onclick=\"return confirm('ยันยันการลบ')\" class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-trash'></span></a>        
+  echo "<td><a href='news.php?act=edit&ID=$row[n_id]' class='btn btn-warning btn-xs'><span class='glyphicon glyphicon-edit'></span></a> 
+        <a href='news_del_db.php?ID=$row[n_id]' onclick=\"return confirm('ยันยันการลบ')\" class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-trash'></span></a>        
     </td> ";
 }
 echo "</table>";

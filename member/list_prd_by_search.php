@@ -12,6 +12,7 @@ $q = $_GET['q'];
 ?>
 
 <?php
+include("h.php");
 include("navbar.php");
 include("search.php");
 ?>

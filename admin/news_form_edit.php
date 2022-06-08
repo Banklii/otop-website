@@ -1,5 +1,6 @@
 <?php 
-$ID = mysqli_real_escape_string($con,$_GET['ID']);
+$ID = $_GET['ID'];
+// $ID = mysqli_real_escape_string($con,$_GET['ID']);
 $sql = "SELECT * FROM tbl_news WHERE n_id=$ID";
 $result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
 $row = mysqli_fetch_array($result);
